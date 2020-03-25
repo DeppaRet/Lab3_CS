@@ -1,6 +1,6 @@
 ﻿namespace Lab3
 {
-  partial class Form1
+  partial class MainWindow
   {
     /// <summary>
     /// Обязательная переменная конструктора.
@@ -28,11 +28,11 @@
     /// </summary>
     private void InitializeComponent()
     {
-      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-      System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-      System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-      System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+      System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+      System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
       this.Graph = new System.Windows.Forms.DataVisualization.Charting.Chart();
       this.toolStrip1 = new System.Windows.Forms.ToolStrip();
       this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -65,26 +65,26 @@
       // 
       // Graph
       // 
-      chartArea3.Name = "ChartArea1";
-      this.Graph.ChartAreas.Add(chartArea3);
-      legend3.Name = "Legend1";
-      this.Graph.Legends.Add(legend3);
+      chartArea1.Name = "ChartArea1";
+      this.Graph.ChartAreas.Add(chartArea1);
+      legend1.Name = "Legend1";
+      this.Graph.Legends.Add(legend1);
       this.Graph.Location = new System.Drawing.Point(12, 38);
       this.Graph.Name = "Graph";
-      series5.ChartArea = "ChartArea1";
-      series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-      series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-      series5.Legend = "Legend1";
-      series5.LegendText = "Прямая строфоида";
-      series5.Name = "Series1";
-      series6.ChartArea = "ChartArea1";
-      series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-      series6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-      series6.IsVisibleInLegend = false;
-      series6.Legend = "Legend1";
-      series6.Name = "Series2";
-      this.Graph.Series.Add(series5);
-      this.Graph.Series.Add(series6);
+      series1.ChartArea = "ChartArea1";
+      series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+      series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+      series1.Legend = "Legend1";
+      series1.LegendText = "Прямая строфоида";
+      series1.Name = "Series1";
+      series2.ChartArea = "ChartArea1";
+      series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+      series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+      series2.IsVisibleInLegend = false;
+      series2.Legend = "Legend1";
+      series2.Name = "Series2";
+      this.Graph.Series.Add(series1);
+      this.Graph.Series.Add(series2);
       this.Graph.Size = new System.Drawing.Size(683, 354);
       this.Graph.TabIndex = 0;
       this.Graph.Text = "Прямая строфоида";
@@ -142,6 +142,7 @@
       this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
       this.выходToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
       this.выходToolStripMenuItem.Text = "Выход";
+      this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
       // 
       // toolStripDropDownButton2
       // 
@@ -157,7 +158,7 @@
       // оПрограммеToolStripMenuItem
       // 
       this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-      this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
       this.оПрограммеToolStripMenuItem.Text = "О программе";
       this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
       // 
@@ -287,7 +288,7 @@
       this.label4.TabIndex = 14;
       this.label4.Text = "a >= |x|";
       // 
-      // Form1
+      // MainWindow
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -309,7 +310,7 @@
       this.Controls.Add(this.Graph);
       this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
       this.MaximizeBox = false;
-      this.Name = "Form1";
+      this.Name = "MainWindow";
       this.Text = "Лабораторная работа №3, Левинский Илья";
       this.Load += new System.EventHandler(this.Form1_Load);
       ((System.ComponentModel.ISupportInitialize)(this.Graph)).EndInit();

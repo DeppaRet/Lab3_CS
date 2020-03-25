@@ -6,9 +6,9 @@ using Microsoft.Office.Interop.Excel;
 
 namespace Lab3
 {
-  public partial class Form1 : Form
+  public partial class MainWindow : Form
   {
-    public Form1()
+    public MainWindow()
     {
       InitializeComponent();
     }
@@ -56,7 +56,6 @@ namespace Lab3
       right = Convert.ToDouble(RightBorder.Text);
       step = Convert.ToDouble(Step.Text);
       a = Convert.ToDouble(AParam.Text);
-      List<string> listExp = new List<string>() { "0", "1,134", "1,155", "0,775", "0", "1,291", "3,464", "7,397" };
       listRes = Calculate.Calc(step, left, right, a, listRes); //Calculate.Calc(i, step, left, right, a, list)
       int k = 0;
       for (double i = left; i < right; i = i + step)
@@ -186,6 +185,11 @@ namespace Lab3
     {
       About about = new About();
       about.ShowDialog();
+    }
+
+    private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      this.Close();
     }
   }
 }
