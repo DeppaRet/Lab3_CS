@@ -23,6 +23,7 @@ namespace Lab3
       экспортToolStripMenuItem.Enabled = true;
       сохранитьToolStripMenuItem.Enabled = true;
       List<string> list = new List<string>();
+      List<string> listRes = new List<string>();
       bool check;
       double tmp = 0;
       double step = 0, left = 0, right = 0, a = 0;
@@ -55,13 +56,17 @@ namespace Lab3
       right = Convert.ToDouble(RightBorder.Text);
       step = Convert.ToDouble(Step.Text);
       a = Convert.ToDouble(AParam.Text);
+      List<string> listExp = new List<string>() { "0", "1,134", "1,155", "0,775", "0", "1,291", "3,464", "7,397" };
+      listRes = Calculate.Calc(step, left, right, a, listRes); //Calculate.Calc(i, step, left, right, a, list)
+      int k = 0;
       for (double i = left; i < right; i = i + step)
       {
-        tmp = Calculate.Calc(i, step, left, right, a, list); //Calculate.Calc(i, step, left, right, a, list)
-        list.Add(Math.Round((i), 7).ToString());
-        list.Add("±" + Math.Round(Math.Abs(tmp), 7).ToString());
+        tmp = Convert.ToDouble(listRes[k]);
         Graph.Series[0].Points.AddXY(i, tmp);
         Graph.Series[1].Points.AddXY(i, -tmp);
+        list.Add(Math.Round((i), 3).ToString());
+        list.Add("±" + tmp.ToString());
+        k++;
       }
       int temp = 0;
       for (int i = temp; i < 100; i += 2)
